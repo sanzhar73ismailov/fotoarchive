@@ -1,0 +1,51 @@
+<include href="view/parts/header.htm" />
+
+
+<div class="tab-content">
+	<div class="tab-pane active">
+	<check if="{{@errorMessage<>''}}">
+	<div class="panel panel-default">
+		<span class="label label-danger">{{@errorMessage}}</span>
+	</div>
+	</check>
+	 <form class="form-horizontal" action="{{@BASE}}/dictionary" id="myDictionaryForm" method="post">
+			<input type="hidden" id="id" name="id" value="{{@entityObj.id}}" />
+			<input type="hidden" id="entity" name="entity" value="{{@entity}}" />
+			
+			
+            <check if="{{@entityObj.id}}"><a href="{{@BASE}}/dictionary/{{@entity}}" class="btn btn-primary">Новый</a></check>
+            
+			
+			<check if="{{@entity}}=='category'"><include href="view/entity/categoryForm.htm" /></check>
+			<check if="{{@entity}}=='employee'"><include href="view/entity/employeeForm.htm" /></check>
+			<check if="{{@entity}}=='customer'"><include href="view/entity/customerForm.htm" /></check>
+			<check if="{{@entity}}=='user'"><include href="view/entity/userForm.htm" /></check>
+			{*<check if="{{@entity}}=='region'"><include href="view/entity/regionForm.htm" /></check>*}
+
+            <check if="{{@entity}} <> 'region'">
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-default">Сохранить</button>
+				</div>
+			</div>
+			</check>
+
+		</form>
+	</div>
+	<div class="panel panel-info">
+			<div class="panel-heading">{{@title}}</div>
+			<div class="panel-body">
+			<div id='table_dic_message'></div>
+			<div class="table-responsive" style="max-height:400px;">
+				<table class="table table-responsive">
+				<check if="{{@entity}}=='category'"><include href="view/entity/categoryList.htm" /></check>
+				<check if="{{@entity}}=='employee'"><include href="view/entity/employeeList.htm" /></check>
+			    <check if="{{@entity}}=='customer'"><include href="view/entity/customerList.htm" /></check>
+			    <check if="{{@entity}}=='user'"><include href="view/entity/userList.htm" /></check>
+			<check if="{{@entity}}=='region'"><include href="view/entity/regionList.htm" /></check>
+				</table>
+			</div>   
+			</div>
+		</div>
+</div>
+<include href="view/parts/footer.htm" />

@@ -1,0 +1,125 @@
+<include href="view/parts/header.htm" />
+<include href="view/parts/report_menu.htm" />
+
+<div class="tab-content">
+	<div id="home" class="tab-pane active">
+	<div id="form_messages" class='alert alert-danger' style='display:none'></div>
+		<form class="form-inline" action="{{@BASE}}/report" id="myReportForm" method="post" enctype="multipart/form-data">
+
+
+			<input type="hidden" id="id" name="id" value="{{@report.id}}"/> 
+			<input type="hidden" id="status_id" name="status_id" value="{{@report.status_id}}" />
+
+			<div class="form-group">
+				<select class="form-control report-input" id="employee_id" name="employee_id" required>
+					<option value="">Выбрать сотрудника</option>
+					<repeat group="{{ @employees }}" value="{{ @item }}"> {{@selected=''}}<check if="{{ @item.id==@report.employee_id }}">{{@selected='selected'}}</check>
+					<option {{@selected}} value="{{@item.id}}">{{@item.last_name}} {{@item.first_name}} {{@item.patronymic_name}}</option>
+					</repeat>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<select class="form-control report-input" id="region_id" name="region_id" required>
+					<option value="">Выбрать район</option>
+					<repeat group="{{ @regions }}" value="{{ @item }}"> {{@selected=''}}<check if="{{ @item.id==@report.region_id }}">{{@selected='selected'}}</check>
+					<option {{@selected}} value="{{@item.id}}">{{@item.name}}</option>
+					</repeat>
+				</select>
+			</div>
+
+			<div class="form-group">
+				<input name="date" id="date" type="date" class="form-control report-input" value="{{@report.date}}" required placeholder="Дата" />
+			</div>
+
+			<!-- <check if="{{ @uploadDone }}">statisticUpload</check> -->
+			<check if="{{@report.status_id < 3}}">
+			<div class="form-group" id="fotoUploadDiv"  style="display:">
+				<a id="loadfotolink" class="btn btn-info block">Загрузить фото</a>
+					<input style="display:none" class="btn btn-default" id="fileInputId" name="fileToUpload[]" multiple type="file" accept="image/*">
+			</div>
+			</check>
+
+
+
+		</form>
+		<set fotoLoadingFinishDiv_display="none" /> 
+		<check if="{{@report.status_id==0 and @foto_count > 0}}"> <set fotoLoadingFinishDiv_display="" /></check>
+		<div id='fotoLoadingFinishDiv' class="panel" style='display: {{@fotoLoadingFinishDiv_display}};'>
+		    <div'><a class="btn btn-success btn-block" href="" id="fotoLoadingFinish">Если с загрузкой фото закончено, нажмите сюда</a></div>
+		</div>
+		<span id="startUpload" style="display: none;"></span>
+		<div id='alertWaitFileLoading' class="alert alert-danger" style="display: none;">
+		    <strong>Внимание!</strong> Идет загрузка файлов, ждите!
+		</div>
+		
+		<div style='display: none' id="progress_each_file_div" class="progress">
+						<div id="progress_each_file_id"
+							class="progress-bar progress-bar-info" role="progressbar" aria-valuemin="0" aria-valuemax="100"
+							style="width: 0%"></div>
+					</div>
+		
+		<div style='display: none' id="progress_active_div"
+						class="progress">
+						<div id="progress_active_id"
+							class="progress-bar progress-bar-info" role="progressbar" aria-valuemin="0" aria-valuemax="100"
+							style="width: 0%"></div>
+					</div>
+		<div class="panel panel-info">
+			<div class="panel-heading">Загруженные файлы в данной сессии<span id="statistica_loaded"></span>
+			<span class="btn btn-default" data-toggle="collapse" data-target="#statistica_loaded_collapse1">Показать/скрыть</span>
+			<ul class="list-inline" id="fileLabels"></ul>
+			</div>
+			<div id="statistica_loaded_collapse1" class="panel-collapse collapse">
+			<div class="panel-body">
+				<div id="fileList" style="overflow-y: scroll; max-height: 300px;"></div>
+			</div>
+			</div>
+		</div>
+		
+		
+	
+		<p />
+		<div class="panel panel-info">
+			<div class="panel-heading" id='panel_head_loaded'>Загруженные файлы <span class="badge fotos_count">{{@report.fotos_count}}</span>
+			<set delete_all_fotosDiv_display="none" />
+			<check if="{{@report.status_id < 3 and @report.fotos_count>0}}">
+			<set delete_all_fotosDiv_display="" />
+			</check>
+			<span id='delete_all_fotos' class='btn btn-danger' style='display:{{@delete_all_fotosDiv_display}}'>Удалить все фото</span>
+			
+			<span class="btn btn-default" data-toggle="collapse" data-target="#already_loaded_collapse1">Показать/скрыть</span>
+			<span id='panel_head_loaded_msg'></span>
+			</div>
+			<div id="already_loaded_collapse1" class="panel-collapse collapse in">
+			<div class="panel-body">
+				<div class="table-responsive" style="max-height: 300px;">
+					<table class="table table-condensed">
+						<thead>
+						    <th>Фото</th>
+							<th>Имя файла</th>
+							<th>Размеры изображения</th>
+							<check if="{{@report.status_id < 3}}"><th>Удалить</th></check>
+						</thead>
+						<tbody id="tbody_foto_exists">
+							<repeat group="{{ @fotos }}" value="{{ @foto }}"> 
+							<tr id='tr{{@foto.id}}'>
+							    <td><img class="img-responsive img-sizing_report_page img-rounded" 	src="{{@BASE}}/smallfoto/{{@foto.foto_name}}" alt="{{@foto.foto_old_name}}"/></td>
+								<td class='foto_old_names'>{{ @foto.foto_old_name }}</td>
+								<td>{{ @foto.width }}x{{ @foto.height }}</td>
+								<check if="{{@report.status_id < 3}}">
+								<td id='td{{@foto.id}}'><a id='link_foto_delete{{@foto.id}}' class='label label-danger link_foto_delete'>Удалить</a></td>
+								</check>
+							</tr>
+							</repeat>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			</div>
+		</div>
+	
+	</div>
+</div>
+
+<include href="view/parts/footer.htm" />

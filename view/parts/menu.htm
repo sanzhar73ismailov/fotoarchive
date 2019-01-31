@@ -1,0 +1,36 @@
+<p>
+<ul class="nav nav-pills">
+        <li role="presentation"><a href="{{@BASE}}/report/new">Создать отчет</a></li>
+		<li role="presentation"><a href="{{@BASE}}/reports">Список отчетов</a></li>
+		
+		<li role="presentation" class="dropdown">
+			<a id="reportmenulink" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" href="report">Справочники<span class="caret"></span></a>
+			<ul class="dropdown-menu" aria-labeledby="reportmenulink">
+			    <li role="presentation"><a href="{{@BASE}}/dictionary/category">Категории</a></li>
+				<li role="presentation"><a href="{{@BASE}}/dictionary/employee">Сотрудники</a></li>
+				<li role="presentation"><a href="{{@BASE}}/dictionary/customer">Заказчики</a></li>
+				<li role="presentation"><a href="{{@BASE}}/dictionary/region">Районы</a></li>
+				<li role="presentation"><a href="{{@BASE}}/dictionary/user">Пользователи</a></li>
+			</ul>
+		</li>
+		
+		<li role="presentation"><a href="{{@BASE}}/settings">Настройки</a></li>
+		
+		
+		{*
+		<li role="presentation" class="dropdown">
+			<a id="reportmenulink" data-toggle="dropdown" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false" href="report">Отчеты<span class="caret"></span></a>
+			<ul class="dropdown-menu" aria-labeledby="reportmenulink">
+				<li role="presentation"><a href="{{@BASE}}/report/new">Создать отчет</a></li>
+				<li role="presentation"><a href="{{@BASE}}/reports">Список отчетов</a></li>
+			</ul>
+		</li>
+		<li role="presentation"><a href="{{@BASE}}/logout">Выйти</a></li>
+		*}
+		
+		<ul class="nav navbar-nav navbar-right">
+		<li role="presentation"><a href="{{@BASE}}/logout"><span class="glyphicon glyphicon-log-out"></span>
+		Выйти</a></li>
+    </ul>
+	</ul>
+</p>

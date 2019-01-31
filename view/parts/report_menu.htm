@@ -1,0 +1,74 @@
+
+<div class="well">
+	<ul class="list-inline">
+		<li class="list-group-item"><strong>Отчет №:</strong>
+			<h4>
+				<span class="label label-default" id="report_id"> <check if="{{@report.id}}">
+					<true>{{@report.id}}</true> <false>новый</false></check>
+				</span>
+			</h4></li>
+		<li class="list-group-item"><strong>Статус:</strong>
+			<h4>
+				<span id="report_status_id" class="label label-default">{{@report.status_name}}</span>
+			</h4></li>
+		<li class="list-group-item"><strong>Сотрудник:</strong>
+			<h4>
+				<span class="label label-default">{{@report.e_fio}}</span>
+			</h4></li>
+		<li class="list-group-item"><strong>Район:</strong>
+			<h4>
+				<span class="label label-default">{{@report.r_name}}</span>
+			</h4></li>
+		<li class="list-group-item"><strong>Дата:</strong>
+			<h4>
+				<span class="label label-default">{{@report.date}}</span>
+			</h4></li>
+		<li class="list-group-item"><strong>Фото:</strong>
+			<h4>
+				<span class="label label-default fotos_count">{{@report.fotos_count}}</span>
+			</h4></li>
+		<li class="list-group-item"><strong>Категорий:</strong>
+			<h4>
+				<span class="label label-default">{{@report.categories_count}}</span>
+			</h4></li>		
+		<li class="list-group-item"><strong>Стоимость:</strong>
+			<h4>
+				<span class="label label-default">{{@report.price}} руб.</span>
+			</h4></li>	
+	</ul>
+</div>
+
+<check if="{{ @page=='report' }}"> <set
+	report_li_active_status="active" /></check>
+<check if="{{ @page=='category' }}"> <set
+	category_li_active_status="active" /></check>
+<check if="{{ @page=='category_match' }}"> <set
+	category_match_li_active_status="active" /></check>
+<check if="{{ @page=='calculate' }}"> <set
+	calculate_li_active_status="active" /></check>
+
+<ul class="nav nav-tabs" role="tablist">
+	<li class="{{@report_li_active_status}}"><a
+		href="{{@BASE}}/report/{{@report.id}}">Загрузить</a></li>
+
+	<check if="{{ @report.status_id > 0}}">
+	<li class="{{@category_li_active_status}}"><a
+		href="{{@BASE}}/category/{{@report.id}}">Создать категории</a></li>
+	</check>
+
+	<check if="{{ @report.status_id > 1}}">
+	<li class="{{@category_match_li_active_status}}"><a
+		href="{{@BASE}}/category_match/{{@report.id}}">Проверить</a></li>
+	</check>
+
+	<check if="{{ @report.status_id > 2}}">
+	<li class="{{@calculate_li_active_status}}"><a
+		href="{{@BASE}}/calculate/{{@report.id}}">Отправить</a></li>
+	</check>
+</ul>
+<check if="{{@errorMessage}}">
+<div class="alert alert-danger">{{@errorMessage}}</div>
+</check>
+<check if="{{@successMessage}}">
+<div class="alert alert-success">{{@successMessage}}</div>
+</check>

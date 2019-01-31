@@ -1,0 +1,114 @@
+<include href="view/parts/header.htm" />
+
+
+<div class="tab-content">
+	<div class="tab-pane active">
+		<check if="{{@errorMessage<>''}}">
+		<div class="panel panel-default">
+			<span class="label label-danger">{{@errorMessage}}</span>
+		</div>
+		</check>
+		<form class="form-horizontal" action="" id="myDictionaryForm" method="post">
+			<input type="hidden" id="id" name="id" value="{{@entityObj.id}}" /> <input type="hidden" id="entity" name="entity" value="{{@entity}}" />
+
+			<div class="panel panel-default">
+				<div class="panel-heading">Настройки электронной почты</div>
+				<div class="panel-body">
+					<div class="form-group">
+						<label class="control-label col-sm-2">Электронная почта:</label>
+						<div class="col-sm-10">
+							<input type="email" class="form-control" name="email_login" value="{{@entityObj.email_login}}" required />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="control-label col-sm-2">Пароль к эл почте:</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" name="email_pass" value="{{@entityObj.email_pass}}" required />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="control-label col-sm-2">Отправитель:</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" name="email_sender" value="{{@entityObj.email_sender}}" required />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="control-label col-sm-2">Почта от:</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" name="email_from" value="{{@entityObj.email_from}}" required />
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="control-label col-sm-2">Лимит размера прикрепеленного файла в МБ:</label>
+						<div class="col-sm-10">
+							<input type="text" class="form-control" name="email_file_limit_mb" value="{{@entityObj.email_file_limit_mb}}" required />
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="control-label col-sm-2">Макс. размер файла в пкс:</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" name="max_img_width" value="{{@entityObj.max_img_width}}" required />
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">Шаблон сообщения</div>
+				<div class="panel-body">
+					<div class="form-group">
+						<label class="control-label col-sm-2" for="email">Используемые для шаблона подстановки:</label>
+						<div class="col-sm-10">
+							<p class="form-control-static">
+							<dl>
+							    <code>&lt;p&gt;</code>
+								- новый абзац
+								<br>
+								<code>&lt;br&gt;</code>
+								- новая строка
+								<br>
+								<code>&lt;REPRESENTATIVE&gt;</code>
+								- представитель компании, куда направляется сообщение (справочник Заказчики)
+								<br>
+								<code>&lt;FILENAME&gt;</code>
+								- название файла (подставляется из базы)
+								<br>
+								<code>&lt;FILELINK&gt;</code>
+								- ссылка на файл (подставляется из кода)
+								<br>
+								<code>&lt;EMAIL_FROM&gt;</code>
+								- имя отправителя (Настройка "Почта от")
+								<br>
+								<code>&lt;COMPANY_NAME&gt;</code>
+								- официальное наименование заказчика (справочник Заказчики)
+								<br>
+								<code>&lt;REGION_MAP&gt;</code>
+								- карта района
+								<br>
+							</dl>
+							</p>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label class="control-label col-sm-2">Шаблон сообщения:</label>
+						<div class="col-sm-10">
+							<textarea class="form-control" rows="10" cols="100" name="email_msg_tmpl" required>{{@entityObj.email_msg_tmpl}}</textarea>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<button type="submit" class="btn btn-default">Сохранить</button>
+				</div>
+			</div>
+
+
+		</form>
+	</div>
+</div>
+<include href="view/parts/footer.htm" />

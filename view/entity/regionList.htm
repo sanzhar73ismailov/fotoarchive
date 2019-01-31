@@ -1,0 +1,26 @@
+<thead>
+						<th>#</th>
+						<th>Наименование</th>
+						<th>Карта</th>
+						<th>Установить</th>
+						
+					</thead>
+					<tbody>
+						<repeat group="{{ @entityList }}" value="{{ @item }}">
+						<tr class="">
+							<td>{{ @item.id }}</td>
+							<td>{{ @item.name }}</td>
+							<td id='td{{@item.id}}'>
+							<check if="{{@item.file_name}}">
+								<true><img width='100' src='{{@BASE}}/smallmap/{{@item.file_name}}' class="img-rounded" alt="Карта района {{@item.name}}"/>
+								<a id='link_map_delete{{@item.id}}' class='label label-danger link_map_delete'>Удалить файл</a>
+								</true>
+								<false>Файл не найден</false>
+							</check>
+							</td>
+							<td><a class="btn btn-default map_load_link" id='link_map_load{{@item.id}}'>Загрузить</a>
+							     <input type='file' id='but_map_load{{@item.id}}' class='map_load_input' style='display:none'/>
+							</td>
+						</tr>
+						</repeat>
+					</tbody>

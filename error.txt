@@ -1,0 +1,223 @@
+Error: 42000 on 2017-12-27 14:59:57
+/var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql.php:226
+SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name ''
+'#0 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql.php(226): PDOStatement->execute()
+#1 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql.php(391): DB\\SQL->exec(\'SHOW columns FR...\', NULL)
+#2 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql/mapper.php(660): DB\\SQL->schema(NULL, NULL, 60)
+#3 /var/www/u0432644/data/www/raskleyka173.ru/crm/page/DictionaryPage.php(75): DB\\SQL\\Mapper->__construct(Object(DB\\SQL), NULL)
+#4 [internal function]: DictionaryPage->post(Object(Base), Array, \'DictionaryPage-...\')
+#5 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1791): call_user_func_array(Array, Array)
+#6 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1612): Base->call(\'DictionaryPage-...\', Array, \'beforeroute,aft...\')
+#7 /var/www/u0432644/data/www/raskleyka173.ru/crm/index.php(108): Base->run()
+#8 {main}'
+
+Error: 23000 on 2017-12-27 15:46:16
+/var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql.php:226
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'pinkschool@mail.ru' for key 'email'
+'#0 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql.php(226): PDOStatement->execute()
+#1 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql/mapper.php(427): DB\\SQL->exec(\'INSERT INTO `cu...\', Array)
+#2 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/cursor.php(245): DB\\SQL\\Mapper->insert()
+#3 /var/www/u0432644/data/www/raskleyka173.ru/crm/page/DictionaryPage.php(99): DB\\Cursor->save()
+#4 [internal function]: DictionaryPage->post(Object(Base), Array, \'DictionaryPage-...\')
+#5 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1791): call_user_func_array(Array, Array)
+#6 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1612): Base->call(\'DictionaryPage-...\', Array, \'beforeroute,aft...\')
+#7 /var/www/u0432644/data/www/raskleyka173.ru/crm/index.php(108): Base->run()
+#8 {main}'
+
+Error: 0 on 2017-12-28 11:36:42
+/var/www/u0432644/data/www/raskleyka173.ru/crm/page/DictionaryPage.php:89
+Данную категорию нельзя менять, на нее ссылаются отчеты
+'#0 [internal function]: DictionaryPage->post(Object(Base), Array, \'DictionaryPage-...\')
+#1 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1791): call_user_func_array(Array, Array)
+#2 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1612): Base->call(\'DictionaryPage-...\', Array, \'beforeroute,aft...\')
+#3 /var/www/u0432644/data/www/raskleyka173.ru/crm/index.php(108): Base->run()
+#4 {main}'
+
+Error: 42000 on 2017-12-29 09:27:40
+/var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql.php:226
+SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name ''
+'#0 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql.php(226): PDOStatement->execute()
+#1 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql.php(391): DB\\SQL->exec(\'SHOW columns FR...\', NULL)
+#2 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql/mapper.php(660): DB\\SQL->schema(NULL, NULL, 60)
+#3 /var/www/u0432644/data/www/raskleyka173.ru/crm/page/DictionaryPage.php(75): DB\\SQL\\Mapper->__construct(Object(DB\\SQL), NULL)
+#4 [internal function]: DictionaryPage->post(Object(Base), Array, \'DictionaryPage-...\')
+#5 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1791): call_user_func_array(Array, Array)
+#6 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1612): Base->call(\'DictionaryPage-...\', Array, \'beforeroute,aft...\')
+#7 /var/www/u0432644/data/www/raskleyka173.ru/crm/index.php(108): Base->run()
+#8 {main}'
+
+Error: 0 on 2017-12-29 09:27:46
+/var/www/u0432644/data/www/raskleyka173.ru/crm/page/DictionaryPage.php:89
+Данную категорию нельзя менять, на нее ссылаются отчеты
+'#0 [internal function]: DictionaryPage->post(Object(Base), Array, \'DictionaryPage-...\')
+#1 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1791): call_user_func_array(Array, Array)
+#2 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1612): Base->call(\'DictionaryPage-...\', Array, \'beforeroute,aft...\')
+#3 /var/www/u0432644/data/www/raskleyka173.ru/crm/index.php(108): Base->run()
+#4 {main}'
+
+Error: 0 on 2017-12-29 09:29:24
+/var/www/u0432644/data/www/raskleyka173.ru/crm/page/DictionaryPage.php:89
+Данную категорию нельзя менять, на нее ссылаются отчеты
+'#0 [internal function]: DictionaryPage->post(Object(Base), Array, \'DictionaryPage-...\')
+#1 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1791): call_user_func_array(Array, Array)
+#2 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1612): Base->call(\'DictionaryPage-...\', Array, \'beforeroute,aft...\')
+#3 /var/www/u0432644/data/www/raskleyka173.ru/crm/index.php(108): Base->run()
+#4 {main}'
+
+Error: 0 on 2017-12-29 09:29:30
+/var/www/u0432644/data/www/raskleyka173.ru/crm/page/DictionaryPage.php:89
+Данную категорию нельзя менять, на нее ссылаются отчеты
+'#0 [internal function]: DictionaryPage->post(Object(Base), Array, \'DictionaryPage-...\')
+#1 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1791): call_user_func_array(Array, Array)
+#2 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1612): Base->call(\'DictionaryPage-...\', Array, \'beforeroute,aft...\')
+#3 /var/www/u0432644/data/www/raskleyka173.ru/crm/index.php(108): Base->run()
+#4 {main}'
+
+Error: 42000 on 2017-12-29 09:32:13
+/var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql.php:226
+SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name ''
+'#0 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql.php(226): PDOStatement->execute()
+#1 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql.php(391): DB\\SQL->exec(\'SHOW columns FR...\', NULL)
+#2 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql/mapper.php(660): DB\\SQL->schema(NULL, NULL, 60)
+#3 /var/www/u0432644/data/www/raskleyka173.ru/crm/page/DictionaryPage.php(75): DB\\SQL\\Mapper->__construct(Object(DB\\SQL), NULL)
+#4 [internal function]: DictionaryPage->post(Object(Base), Array, \'DictionaryPage-...\')
+#5 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1791): call_user_func_array(Array, Array)
+#6 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1612): Base->call(\'DictionaryPage-...\', Array, \'beforeroute,aft...\')
+#7 /var/www/u0432644/data/www/raskleyka173.ru/crm/index.php(108): Base->run()
+#8 {main}'
+
+Error: 0 on 2017-12-29 09:32:17
+/var/www/u0432644/data/www/raskleyka173.ru/crm/page/DictionaryPage.php:89
+Данную категорию нельзя менять, на нее ссылаются отчеты
+'#0 [internal function]: DictionaryPage->post(Object(Base), Array, \'DictionaryPage-...\')
+#1 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1791): call_user_func_array(Array, Array)
+#2 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1612): Base->call(\'DictionaryPage-...\', Array, \'beforeroute,aft...\')
+#3 /var/www/u0432644/data/www/raskleyka173.ru/crm/index.php(108): Base->run()
+#4 {main}'
+
+Error: 0 on 2017-12-29 20:21:06
+/var/www/u0432644/data/www/raskleyka173.ru/crm/page/DictionaryPage.php:89
+Данную категорию нельзя менять, на нее ссылаются отчеты
+'#0 [internal function]: DictionaryPage->post(Object(Base), Array, \'DictionaryPage-...\')
+#1 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1791): call_user_func_array(Array, Array)
+#2 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1612): Base->call(\'DictionaryPage-...\', Array, \'beforeroute,aft...\')
+#3 /var/www/u0432644/data/www/raskleyka173.ru/crm/index.php(108): Base->run()
+#4 {main}'
+
+Error: 42000 on 2018-09-07 10:46:47
+/var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql.php:226
+SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name ''
+'#0 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql.php(226): PDOStatement->execute()
+#1 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql.php(391): DB\\SQL->exec(\'SHOW columns FR...\', NULL)
+#2 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql/mapper.php(660): DB\\SQL->schema(NULL, NULL, 60)
+#3 /var/www/u0432644/data/www/raskleyka173.ru/crm/page/DictionaryPage.php(75): DB\\SQL\\Mapper->__construct(Object(DB\\SQL), NULL)
+#4 [internal function]: DictionaryPage->post(Object(Base), Array, \'DictionaryPage-...\')
+#5 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1791): call_user_func_array(Array, Array)
+#6 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1612): Base->call(\'DictionaryPage-...\', Array, \'beforeroute,aft...\')
+#7 /var/www/u0432644/data/www/raskleyka173.ru/crm/index.php(121): Base->run()
+#8 {main}'
+
+Error: 42000 on 2018-09-07 10:49:25
+/var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql.php:226
+SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name ''
+'#0 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql.php(226): PDOStatement->execute()
+#1 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql.php(391): DB\\SQL->exec(\'SHOW columns FR...\', NULL)
+#2 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql/mapper.php(660): DB\\SQL->schema(NULL, NULL, 60)
+#3 /var/www/u0432644/data/www/raskleyka173.ru/crm/page/DictionaryPage.php(75): DB\\SQL\\Mapper->__construct(Object(DB\\SQL), NULL)
+#4 [internal function]: DictionaryPage->post(Object(Base), Array, \'DictionaryPage-...\')
+#5 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1791): call_user_func_array(Array, Array)
+#6 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1612): Base->call(\'DictionaryPage-...\', Array, \'beforeroute,aft...\')
+#7 /var/www/u0432644/data/www/raskleyka173.ru/crm/index.php(121): Base->run()
+#8 {main}'
+
+Error: 42000 on 2018-09-07 10:49:57
+/var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql.php:226
+SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name ''
+'#0 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql.php(226): PDOStatement->execute()
+#1 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql.php(391): DB\\SQL->exec(\'SHOW columns FR...\', NULL)
+#2 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql/mapper.php(660): DB\\SQL->schema(NULL, NULL, 60)
+#3 /var/www/u0432644/data/www/raskleyka173.ru/crm/page/DictionaryPage.php(75): DB\\SQL\\Mapper->__construct(Object(DB\\SQL), NULL)
+#4 [internal function]: DictionaryPage->post(Object(Base), Array, \'DictionaryPage-...\')
+#5 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1791): call_user_func_array(Array, Array)
+#6 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1612): Base->call(\'DictionaryPage-...\', Array, \'beforeroute,aft...\')
+#7 /var/www/u0432644/data/www/raskleyka173.ru/crm/index.php(121): Base->run()
+#8 {main}'
+
+Error: 42000 on 2018-09-07 10:50:09
+/var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql.php:226
+SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name ''
+'#0 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql.php(226): PDOStatement->execute()
+#1 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql.php(391): DB\\SQL->exec(\'SHOW columns FR...\', NULL)
+#2 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql/mapper.php(660): DB\\SQL->schema(NULL, NULL, 60)
+#3 /var/www/u0432644/data/www/raskleyka173.ru/crm/page/DictionaryPage.php(75): DB\\SQL\\Mapper->__construct(Object(DB\\SQL), NULL)
+#4 [internal function]: DictionaryPage->post(Object(Base), Array, \'DictionaryPage-...\')
+#5 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1791): call_user_func_array(Array, Array)
+#6 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1612): Base->call(\'DictionaryPage-...\', Array, \'beforeroute,aft...\')
+#7 /var/www/u0432644/data/www/raskleyka173.ru/crm/index.php(121): Base->run()
+#8 {main}'
+
+Error: 42000 on 2018-09-07 10:59:28
+/var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql.php:226
+SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name ''
+'#0 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql.php(226): PDOStatement->execute()
+#1 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql.php(391): DB\\SQL->exec(\'SHOW columns FR...\', NULL)
+#2 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql/mapper.php(660): DB\\SQL->schema(NULL, NULL, 60)
+#3 /var/www/u0432644/data/www/raskleyka173.ru/crm/page/DictionaryPage.php(75): DB\\SQL\\Mapper->__construct(Object(DB\\SQL), NULL)
+#4 [internal function]: DictionaryPage->post(Object(Base), Array, \'DictionaryPage-...\')
+#5 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1791): call_user_func_array(Array, Array)
+#6 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1612): Base->call(\'DictionaryPage-...\', Array, \'beforeroute,aft...\')
+#7 /var/www/u0432644/data/www/raskleyka173.ru/crm/index.php(121): Base->run()
+#8 {main}'
+
+Error: 23000 on 2018-09-07 11:06:06
+/var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql.php:226
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry 'e.sedreev@greenpride.ru' for key 'email'
+'#0 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql.php(226): PDOStatement->execute()
+#1 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql/mapper.php(427): DB\\SQL->exec(\'INSERT INTO `cu...\', Array)
+#2 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/cursor.php(245): DB\\SQL\\Mapper->insert()
+#3 /var/www/u0432644/data/www/raskleyka173.ru/crm/page/DictionaryPage.php(111): DB\\Cursor->save()
+#4 [internal function]: DictionaryPage->post(Object(Base), Array, \'DictionaryPage-...\')
+#5 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1791): call_user_func_array(Array, Array)
+#6 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1612): Base->call(\'DictionaryPage-...\', Array, \'beforeroute,aft...\')
+#7 /var/www/u0432644/data/www/raskleyka173.ru/crm/index.php(121): Base->run()
+#8 {main}'
+
+Error: 42000 on 2018-09-08 15:57:59
+/var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql.php:226
+SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name ''
+'#0 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql.php(226): PDOStatement->execute()
+#1 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql.php(391): DB\\SQL->exec(\'SHOW columns FR...\', NULL)
+#2 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql/mapper.php(660): DB\\SQL->schema(NULL, NULL, 60)
+#3 /var/www/u0432644/data/www/raskleyka173.ru/crm/page/DictionaryPage.php(75): DB\\SQL\\Mapper->__construct(Object(DB\\SQL), NULL)
+#4 [internal function]: DictionaryPage->post(Object(Base), Array, \'DictionaryPage-...\')
+#5 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1791): call_user_func_array(Array, Array)
+#6 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1612): Base->call(\'DictionaryPage-...\', Array, \'beforeroute,aft...\')
+#7 /var/www/u0432644/data/www/raskleyka173.ru/crm/index.php(121): Base->run()
+#8 {main}'
+
+Error: 42000 on 2018-09-09 11:01:45
+/var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql.php:226
+SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name ''
+'#0 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql.php(226): PDOStatement->execute()
+#1 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql.php(391): DB\\SQL->exec(\'SHOW columns FR...\', NULL)
+#2 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql/mapper.php(660): DB\\SQL->schema(NULL, NULL, 60)
+#3 /var/www/u0432644/data/www/raskleyka173.ru/crm/page/DictionaryPage.php(75): DB\\SQL\\Mapper->__construct(Object(DB\\SQL), NULL)
+#4 [internal function]: DictionaryPage->post(Object(Base), Array, \'DictionaryPage-...\')
+#5 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1791): call_user_func_array(Array, Array)
+#6 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1612): Base->call(\'DictionaryPage-...\', Array, \'beforeroute,aft...\')
+#7 /var/www/u0432644/data/www/raskleyka173.ru/crm/index.php(121): Base->run()
+#8 {main}'
+
+Error: 42000 on 2018-09-09 11:09:21
+/var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql.php:226
+SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name ''
+'#0 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql.php(226): PDOStatement->execute()
+#1 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql.php(391): DB\\SQL->exec(\'SHOW columns FR...\', NULL)
+#2 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/db/sql/mapper.php(660): DB\\SQL->schema(NULL, NULL, 60)
+#3 /var/www/u0432644/data/www/raskleyka173.ru/crm/page/DictionaryPage.php(75): DB\\SQL\\Mapper->__construct(Object(DB\\SQL), NULL)
+#4 [internal function]: DictionaryPage->post(Object(Base), Array, \'DictionaryPage-...\')
+#5 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1791): call_user_func_array(Array, Array)
+#6 /var/www/u0432644/data/www/raskleyka173.ru/crm/vendor/bcosca/fatfree/lib/base.php(1612): Base->call(\'DictionaryPage-...\', Array, \'beforeroute,aft...\')
+#7 /var/www/u0432644/data/www/raskleyka173.ru/crm/index.php(121): Base->run()
+#8 {main}'
+

@@ -1,0 +1,297 @@
+<include href="view/parts/header.htm" />
+<include href="view/parts/report_menu.htm" />
+<style>
+body {
+	font-family: Verdana, sans-serif;
+	margin: 0;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+.row>.column {
+	padding: 0 8px;
+}
+
+.row:after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+.column {
+	float: left;
+	width: 25%;
+}
+
+/* The Modal (background) */
+.modal {
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 100px;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	background-color: black;
+}
+
+/* Modal Content */
+.modal-content {
+	position: relative;
+	background-color: #fefefe;
+	margin: auto;
+	padding: 0;
+	width: 90%;
+	max-width: 800px;
+}
+
+/* The Close Button */
+.close_on_match {
+	color: white;
+	position: absolute;
+	top: 70px;
+	right: 25px;
+	font-size: 35px;
+	font-weight: bold;
+}
+
+.close:hover, .close:focus {
+	color: #999;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.mySlides {
+	display: none;
+}
+
+.cursor {
+	cursor: pointer
+}
+
+/* Next & previous buttons */
+.prev, .next {
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	padding: 16px;
+	margin-top: -50px;
+	color: white;
+	font-weight: bold;
+	font-size: 20px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	user-select: none;
+	-webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+	right: 0;
+	border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+	background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+	/*color: #f2f2f2;*/
+	color: black;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	background-color: white;
+	bottom: 10px;
+	right: 0;
+}
+
+img {
+	margin-bottom: -4px;
+}
+
+.caption-container {
+	text-align: center;
+	background-color: black;
+	padding: 2px 16px;
+	color: white;
+}
+
+.demo {
+	opacity: 0.6;
+}
+
+.active, .demo:hover {
+	opacity: 1;
+}
+
+img.hover-shadow {
+	transition: 0.3s
+}
+
+.hover-shadow:hover {
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+		rgba(0, 0, 0, 0.19)
+}
+</style>
+
+
+<div id="home" class="tab-pane">
+
+
+
+
+
+
+	<div class="container">
+		<button id="save_category_match_btn" class="btn btn-primary">Сохранить</button>
+		<div id="imgSections" class="panel panel-default">
+			<div class="panel-body">
+				<ul class="list-inline">
+					<repeat group="{{ @fotos }}" value="{{ @foto }}" counter="{{@cnt}}">
+
+					<li style="vertical-align:top;" class="list-group-item">{{@foto.foto_old_name}} 
+					 <img onclick="openModal(); currentSlide({{@cnt}})" class="img-responsive img-sizing img-rounded"
+						src="{{@BASE}}/{{@foto.foto_name}}" alt="{{@foto.foto_old_name}}">
+						<div class="panel">
+							<ul class="list-group" id="labelInList{{@cnt}}">
+
+								<check if="{{ @foto.is_address }}"><li class="list-group-item disabled">Адрес</li></check>
+								<check if="{{ @foto.deleted }}"><li class="list-group-item list-group-item-danger">Удалить</li></check>
+										<repeat group="{{ @categories }}" value="{{ @foto_upload_category }}"> <set category_checked="" /> <repeat group="{{ @fotoCategories }}" value="{{ @foto_category }}"> 
+										   <check if="{{@foto_category.foto_id == @foto.id and @foto_category.foto_upload_category_id == @foto_upload_category.id }}">
+										   <li class="list-group-item list-group-item-info">{{ @foto_upload_category.category_name }}</li></check> 
+										</repeat>
+									</repeat>
+							</ul>
+						</div>
+					</li>
+					</repeat>
+				</ul>
+
+			</div>
+		</div>
+	</div>
+</div>
+
+<div id="myModal" class="modal">
+	<span class="close_on_match cursor" onclick="closeModal()">&times;</span>
+	<div class="modal-content">
+		<form class="form-inline" action="{{@BASE}}/category_match" id="myReportForm" method="post" enctype="multipart/form-data">
+			<button id="save_category_match_btn_run" class="btn btn-primary" style="display: none;"></button>
+			<input type="hidden" id="id" name="id" value="{{@report.id}}" />
+			<repeat group="{{ @fotos }}" value="{{ @foto }}" counter="{{@cnt}}">
+			<div class="mySlides">
+				<div class="numbertext panel">
+					{{@cnt}} / {{ count(@fotos) }}
+					<check if='{{@cnt == count(@fotos) }}'>
+						<div class="label label-info">Последний</div>
+				   </check>
+				   <br/>
+					<set adress_checked="" />
+					<set deleted_checked="" />
+					<check if="{{ @foto.is_address }}">
+					<set adress_checked="checked" /></check>
+					<check if="{{ @foto.deleted }}">
+					<set deleted_checked="checked" /></check>
+					<div class="radiosDiv" id="radiosDiv{{@cnt}}">
+						<div class="radio">
+							<label><input id="radio{{@cnt}}Address" class="foto_match_checkbox" {{@adress_checked}} type="checkbox" name="foto_{{@foto.id}}[]" value="address"><span
+								id="radioText{{@cnt}}Address" style='font-weight: bold;'>Адрес</span></label>
+						</div>
+						<br />
+
+						<repeat group="{{ @categories }}" value="{{ @foto_upload_category }}"> <set category_checked="" /> <repeat group="{{ @fotoCategories }}" value="{{ @foto_category }}"> <check
+							if="{{@foto_category.foto_id == @foto.id and @foto_category.foto_upload_category_id == @foto_upload_category.id }}"> <set category_checked="checked" /> </check> </repeat>
+						<div class="radio">
+							<label><input id="radio{{@cnt}}{{@foto.id}}" class="foto_match_checkbox" {{@category_checked}} type="checkbox" name="foto_{{@foto.id}}[]" value="{{@foto_upload_category.id}}"><span
+								id="radioText{{@cnt}}{{@foto.id}}">{{ @foto_upload_category.category_name }}</span></label>
+						</div>
+						<br />
+
+						</repeat>
+
+
+						<div class="radio">
+							<label><input id="radio{{@cnt}}Delete" class="foto_match_checkbox" {{@deleted_checked}} type="checkbox" name="foto_{{@foto.id}}[]" value="delete"><span
+								id="radioText{{@cnt}}Delete" style='color: red'>Удалить</span></label>
+						</div>
+						<check if='{{@cnt == count(@fotos) }}'>
+						<br/>
+						<button id="save_category_match_btn_on_modal" class="btn btn-primary">Сохранить</button>
+						</check>
+					</div>
+				</div>
+
+				<img class='img_in_modal' onclick="plusSlides(1)" src="{{@BASE}}/{{@foto.foto_name}}" style="width: 100%; max-width: 800px;">
+			</div>
+
+			</repeat>
+		</form>
+
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+		<div class="caption-container">
+			<p id="caption"></p>
+		</div>
+
+		<repeat group="{{ @fotos }}" value="{{ @foto }}" counter="{{@cnt}}">
+		<div class="column">
+			<img class="demo cursor" src="{{@BASE}}/{{@foto.foto_name}}" style="width: 40%" onclick="currentSlide({{@cnt}})" alt="{{@foto.foto_old_name}}">
+		</div>
+
+		</repeat>
+
+
+	</div>
+</div>
+
+
+
+<script>
+function openModal() {
+  document.getElementById('myModal').style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById('myModal').style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+<include href="view/parts/footer.htm" />

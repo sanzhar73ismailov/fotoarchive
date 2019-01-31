@@ -1,0 +1,45 @@
+<include href="view/parts/header.htm" />
+<include href="view/parts/report_menu.htm" />
+
+<div class="tab-content">
+	<div id="home" class="tab-pane active">
+		<form class="form-inline" action="{{@BASE}}/category" id="myReportForm" method="post">
+			<input type="hidden" id="id" name="id" value="{{@report.id}}" />
+			<div class="panel panel-default">
+				
+				<table class="table table-striped">
+					<thead>
+						<tr>
+							<th>Заказчик</th>
+							<th>Объявление</th>
+							<th>Цена</th>
+							<th>Выбрать</th>
+						</tr>
+					</thead>
+					<tbody>
+						<repeat group="{{ @categories }}" value="{{ @category }}">
+						<tr>
+							<td>{{@category.customer_name}}</td>
+							<td>{{@category.name}}</td>
+							<td>{{@category.price}} руб.</td>
+							<set checked="" />
+							<check if="{{ @fotoUploadCategories }}">
+								<repeat group="{{ @fotoUploadCategories }}" value="{{ @item }}">
+									<check if="{{@category.id==@item.category_id}}"><set checked="checked" /></check>
+								</repeat>
+							</check>
+							<td><input {{@checked}} name="category_id[]" type="checkbox" value="{{@category.id}}" /></td>
+						</tr>
+						</repeat>
+					</tbody>
+				</table>
+
+			</div>
+			<div class="panel-footer">
+				<button type="submit" class="btn btn-primary">Сохранить</button>
+			</div>
+		</form>
+
+	</div>
+</div>
+<include href="view/parts/footer.htm" />

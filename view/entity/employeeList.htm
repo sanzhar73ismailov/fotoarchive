@@ -1,0 +1,28 @@
+<thead>
+						<th>#</th>
+						<th>Фамилия</th>
+						<th>Имя</th>
+						<th>Отчества</th>
+						<th>Телефон</th>
+						<th>Статус</th>
+					</thead>
+					<tbody>
+						<repeat group="{{ @entityList }}" value="{{ @item }}">
+						<tr class="">
+							<td>{{ @item.id }}</td>
+							
+						<set link_class="btn btn-default btn-block" />
+						<check if="{{ @item.id==@entityObj.id }}"> <set link_class="btn btn-primary btn-block" /></check>
+							
+							
+							<td><a class="{{@link_class}}" href="{{@BASE}}/dictionary/{{@entity}}/{{@item.id}}">
+							<span class="glyphicon glyphicon-pencil">
+							{{ @item.last_name }}</a></td>
+							<td>{{ @item.first_name }}</td>
+							<td>{{ @item.patronymic_name }}</td>
+							<td>{{ @item.phone_number }}</td>
+							<td><check if="{{@item.status==1}}"> <true>Активный</span></true>
+								<false>Неактивный</false> </check></td>
+						</tr>
+						</repeat>
+					</tbody>

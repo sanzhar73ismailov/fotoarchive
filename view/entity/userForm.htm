@@ -1,0 +1,23 @@
+<div class="form-group">
+				<label class="control-label col-sm-2" for="id">ID:</label>
+				<div class="col-sm-10">
+				<check if="{{@entityObj.id}}">
+					<true><h4><span class="label label-info">{{@entityObj.id}}</span></h4></true>
+					<false><h4><span class="label label-warning">Новый объект</span></h4></false>
+				</check>	
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="control-label col-sm-2">Логин:</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" name="login" value="{{@entityObj.login}}" placeholder="Логин" required/>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label class="control-label col-sm-2">Пароль:</label>
+				<div class="col-sm-10">
+					<input type="password" class="form-control" name="password" value="" placeholder="Пароль" required/>
+				</div>
+			</div>

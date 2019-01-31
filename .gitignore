@@ -1,0 +1,10 @@
+vendor
+/.buildpath
+/.project
+tmp
+/view/test.htm
+.settings
+/composer.lock
+/java_prj/fotouploader/target/
+/java_prj/fotouploader/nbproject/
+logs

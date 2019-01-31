@@ -1,0 +1,52 @@
+<div class="form-group">
+				<label class="control-label col-sm-2" for="id">ID:</label>
+				<div class="col-sm-10">
+				<check if="{{@entityObj.id}}">
+					<true><h4><span class="label label-info">{{@entityObj.id}}</span></h4></true>
+					<false><h4><span class="label label-warning">Новый объект</span></h4></false>
+				</check>	
+				</div>
+			</div>
+
+			
+
+			<div class="form-group">
+				<label class="control-label col-sm-2">Фамилия:</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" name="last_name" value="{{@entityObj.last_name}}" placeholder="Фамилия" required/>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label class="control-label col-sm-2">Имя:</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" name="first_name" value="{{@entityObj.first_name}}" placeholder="Имя" required/>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label class="control-label col-sm-2">Отчество:</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" name="patronymic_name" value="{{@entityObj.patronymic_name}}" placeholder="Отчество" required/>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label class="control-label col-sm-2">Телефон:</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" name="phone_number" value="{{@entityObj.phone_number}}" placeholder="Телефон" required/>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<div class="col-sm-offset-2 col-sm-10">
+					<div class="checkbox">
+						<label>
+						<set status_checked="" />
+						<check if="{{ @entityObj.status }}"> <set status_checked="checked" /></check>
+							<input type="checkbox" {{@status_checked}} value="1" name="status">
+							Статус активный
+						</label>
+					</div>
+				</div>
+			</div>

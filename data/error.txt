@@ -1,0 +1,283 @@
+Error: 42000 on 2017-12-19 09:32:01
+C:\OSPanel\domains\localhost\fotoarchive\vendor\bcosca\fatfree\lib\db\sql.php:226
+SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name ''
+'#0 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql.php(226): PDOStatement->execute()
+#1 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql.php(391): DB\\SQL->exec(Array, Array)
+#2 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql\\mapper.php(660): DB\\SQL->schema(NULL, NULL, 60)
+#3 C:\\OSPanel\\domains\\localhost\\fotoarchive\\page\\DictionaryPage.php(126): DB\\SQL\\Mapper->__construct(Object(DB\\SQL), NULL)
+#4 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1791): DictionaryPage->post(Object(Base), Array, \'DictionaryPage-...\')
+#5 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1612): Base->call(Array, Array, Array)
+#6 C:\\OSPanel\\domains\\localhost\\fotoarchive\\index.php(113): Base->run()
+#7 {main}'
+
+Error: 42000 on 2017-12-19 09:32:04
+C:\OSPanel\domains\localhost\fotoarchive\vendor\bcosca\fatfree\lib\db\sql.php:226
+SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name ''
+'#0 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql.php(226): PDOStatement->execute()
+#1 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql.php(391): DB\\SQL->exec(Array, Array)
+#2 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql\\mapper.php(660): DB\\SQL->schema(NULL, NULL, 60)
+#3 C:\\OSPanel\\domains\\localhost\\fotoarchive\\page\\DictionaryPage.php(126): DB\\SQL\\Mapper->__construct(Object(DB\\SQL), NULL)
+#4 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1791): DictionaryPage->post(Object(Base), Array, \'DictionaryPage-...\')
+#5 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1612): Base->call(Array, Array, Array)
+#6 C:\\OSPanel\\domains\\localhost\\fotoarchive\\index.php(113): Base->run()
+#7 {main}'
+
+Error: 42000 on 2017-12-19 09:32:12
+C:\OSPanel\domains\localhost\fotoarchive\vendor\bcosca\fatfree\lib\db\sql.php:226
+SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name ''
+'#0 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql.php(226): PDOStatement->execute()
+#1 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql.php(391): DB\\SQL->exec(Array, Array)
+#2 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql\\mapper.php(660): DB\\SQL->schema(NULL, NULL, 60)
+#3 C:\\OSPanel\\domains\\localhost\\fotoarchive\\page\\DictionaryPage.php(126): DB\\SQL\\Mapper->__construct(Object(DB\\SQL), NULL)
+#4 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1791): DictionaryPage->post(Object(Base), Array, \'DictionaryPage-...\')
+#5 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1612): Base->call(Array, Array, Array)
+#6 C:\\OSPanel\\domains\\localhost\\fotoarchive\\index.php(113): Base->run()
+#7 {main}'
+
+Error: 42000 on 2017-12-19 09:33:12
+C:\OSPanel\domains\localhost\fotoarchive\vendor\bcosca\fatfree\lib\db\sql.php:226
+SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name ''
+'#0 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql.php(226): PDOStatement->execute()
+#1 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql.php(391): DB\\SQL->exec(Array, Array)
+#2 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql\\mapper.php(660): DB\\SQL->schema(NULL, NULL, 60)
+#3 C:\\OSPanel\\domains\\localhost\\fotoarchive\\page\\DictionaryPage.php(126): DB\\SQL\\Mapper->__construct(Object(DB\\SQL), NULL)
+#4 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1791): DictionaryPage->post(Object(Base), Array, \'DictionaryPage-...\')
+#5 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1612): Base->call(Array, Array, Array)
+#6 C:\\OSPanel\\domains\\localhost\\fotoarchive\\index.php(113): Base->run()
+#7 {main}'
+
+Error: 42000 on 2017-12-19 09:37:22
+C:\OSPanel\domains\localhost\fotoarchive\vendor\bcosca\fatfree\lib\db\sql.php:226
+SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name ''
+'#0 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql.php(226): PDOStatement->execute()
+#1 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql.php(391): DB\\SQL->exec(Array, Array)
+#2 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql\\mapper.php(660): DB\\SQL->schema(NULL, NULL, 60)
+#3 C:\\OSPanel\\domains\\localhost\\fotoarchive\\page\\DictionaryPage.php(128): DB\\SQL\\Mapper->__construct(Object(DB\\SQL), NULL)
+#4 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1791): DictionaryPage->post(Object(Base), Array, \'DictionaryPage-...\')
+#5 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1612): Base->call(Array, Array, Array)
+#6 C:\\OSPanel\\domains\\localhost\\fotoarchive\\index.php(113): Base->run()
+#7 {main}'
+
+Error: 42000 on 2017-12-19 09:37:36
+C:\OSPanel\domains\localhost\fotoarchive\vendor\bcosca\fatfree\lib\db\sql.php:226
+SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name ''
+'#0 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql.php(226): PDOStatement->execute()
+#1 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql.php(391): DB\\SQL->exec(Array, Array)
+#2 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql\\mapper.php(660): DB\\SQL->schema(NULL, NULL, 60)
+#3 C:\\OSPanel\\domains\\localhost\\fotoarchive\\page\\DictionaryPage.php(128): DB\\SQL\\Mapper->__construct(Object(DB\\SQL), NULL)
+#4 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1791): DictionaryPage->post(Object(Base), Array, \'DictionaryPage-...\')
+#5 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1612): Base->call(Array, Array, Array)
+#6 C:\\OSPanel\\domains\\localhost\\fotoarchive\\index.php(113): Base->run()
+#7 {main}'
+
+Error: 42S02 on 2017-12-20 10:26:35
+C:\OSPanel\domains\localhost\fotoarchive\vendor\bcosca\fatfree\lib\db\sql.php:226
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'fotoarchive.foto1' doesn't exist
+'#0 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql.php(226): PDOStatement->execute()
+#1 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql.php(391): DB\\SQL->exec(Array, Array)
+#2 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql\\mapper.php(660): DB\\SQL->schema(\'foto1\', NULL, 60)
+#3 C:\\OSPanel\\domains\\localhost\\fotoarchive\\functions\\functions.php(86): DB\\SQL\\Mapper->__construct(Object(DB\\SQL), \'foto1\')
+#4 C:\\OSPanel\\domains\\localhost\\fotoarchive\\test_func.php(107): deleteEntity(Object(Base), \'foto1\', 1610)
+#5 C:\\OSPanel\\domains\\localhost\\fotoarchive\\test.php(48): deleteTest(Object(Base), 1610)
+#6 {main}'
+
+Error: 42S02 on 2017-12-20 10:54:38
+C:\OSPanel\domains\localhost\fotoarchive\vendor\bcosca\fatfree\lib\db\sql.php:226
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'fotoarchive.foto1' doesn't exist
+'#0 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql.php(226): PDOStatement->execute()
+#1 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql.php(391): DB\\SQL->exec(Array, Array)
+#2 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql\\mapper.php(660): DB\\SQL->schema(\'foto1\', NULL, 60)
+#3 C:\\OSPanel\\domains\\localhost\\fotoarchive\\functions\\functions.php(100): DB\\SQL\\Mapper->__construct(Object(DB\\SQL), \'foto1\')
+#4 C:\\OSPanel\\domains\\localhost\\fotoarchive\\functions\\functions.php(81): deleteEntity(Object(Base), \'foto1\', \'1665\')
+#5 C:\\OSPanel\\domains\\localhost\\fotoarchive\\page\\ReportFormPage.php(275): deleteFoto(Object(Base), \'1665\')
+#6 C:\\OSPanel\\domains\\localhost\\fotoarchive\\page\\ReportFormPage.php(51): ReportFormPage->deleteFoto(Object(Base), Array)
+#7 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1791): ReportFormPage->post(Object(Base), Array, \'ReportFormPage-...\')
+#8 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1612): Base->call(Array, Array, Array)
+#9 C:\\OSPanel\\domains\\localhost\\fotoarchive\\index.php(113): Base->run()
+#10 {main}'
+
+Error: 42S02 on 2017-12-20 10:54:46
+C:\OSPanel\domains\localhost\fotoarchive\vendor\bcosca\fatfree\lib\db\sql.php:226
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'fotoarchive.foto1' doesn't exist
+'#0 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql.php(226): PDOStatement->execute()
+#1 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql.php(391): DB\\SQL->exec(Array, Array)
+#2 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql\\mapper.php(660): DB\\SQL->schema(\'foto1\', NULL, 60)
+#3 C:\\OSPanel\\domains\\localhost\\fotoarchive\\functions\\functions.php(100): DB\\SQL\\Mapper->__construct(Object(DB\\SQL), \'foto1\')
+#4 C:\\OSPanel\\domains\\localhost\\fotoarchive\\functions\\functions.php(81): deleteEntity(Object(Base), \'foto1\', \'1665\')
+#5 C:\\OSPanel\\domains\\localhost\\fotoarchive\\page\\ReportFormPage.php(275): deleteFoto(Object(Base), \'1665\')
+#6 C:\\OSPanel\\domains\\localhost\\fotoarchive\\page\\ReportFormPage.php(51): ReportFormPage->deleteFoto(Object(Base), Array)
+#7 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1791): ReportFormPage->post(Object(Base), Array, \'ReportFormPage-...\')
+#8 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1612): Base->call(Array, Array, Array)
+#9 C:\\OSPanel\\domains\\localhost\\fotoarchive\\index.php(113): Base->run()
+#10 {main}'
+
+Error: 42S02 on 2017-12-20 10:55:20
+C:\OSPanel\domains\localhost\fotoarchive\vendor\bcosca\fatfree\lib\db\sql.php:226
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'fotoarchive.foto1' doesn't exist
+'#0 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql.php(226): PDOStatement->execute()
+#1 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql.php(391): DB\\SQL->exec(Array, Array)
+#2 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql\\mapper.php(660): DB\\SQL->schema(\'foto1\', NULL, 60)
+#3 C:\\OSPanel\\domains\\localhost\\fotoarchive\\functions\\functions.php(100): DB\\SQL\\Mapper->__construct(Object(DB\\SQL), \'foto1\')
+#4 C:\\OSPanel\\domains\\localhost\\fotoarchive\\functions\\functions.php(81): deleteEntity(Object(Base), \'foto1\', \'1665\')
+#5 C:\\OSPanel\\domains\\localhost\\fotoarchive\\page\\ReportFormPage.php(275): deleteFoto(Object(Base), \'1665\')
+#6 C:\\OSPanel\\domains\\localhost\\fotoarchive\\page\\ReportFormPage.php(51): ReportFormPage->deleteFoto(Object(Base), Array)
+#7 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1791): ReportFormPage->post(Object(Base), Array, \'ReportFormPage-...\')
+#8 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1612): Base->call(Array, Array, Array)
+#9 C:\\OSPanel\\domains\\localhost\\fotoarchive\\index.php(113): Base->run()
+#10 {main}'
+
+Error: 42S02 on 2017-12-20 10:55:27
+C:\OSPanel\domains\localhost\fotoarchive\vendor\bcosca\fatfree\lib\db\sql.php:226
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'fotoarchive.foto1' doesn't exist
+'#0 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql.php(226): PDOStatement->execute()
+#1 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql.php(391): DB\\SQL->exec(Array, Array)
+#2 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql\\mapper.php(660): DB\\SQL->schema(\'foto1\', NULL, 60)
+#3 C:\\OSPanel\\domains\\localhost\\fotoarchive\\functions\\functions.php(100): DB\\SQL\\Mapper->__construct(Object(DB\\SQL), \'foto1\')
+#4 C:\\OSPanel\\domains\\localhost\\fotoarchive\\functions\\functions.php(81): deleteEntity(Object(Base), \'foto1\', \'1663\')
+#5 C:\\OSPanel\\domains\\localhost\\fotoarchive\\page\\ReportFormPage.php(275): deleteFoto(Object(Base), \'1663\')
+#6 C:\\OSPanel\\domains\\localhost\\fotoarchive\\page\\ReportFormPage.php(51): ReportFormPage->deleteFoto(Object(Base), Array)
+#7 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1791): ReportFormPage->post(Object(Base), Array, \'ReportFormPage-...\')
+#8 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1612): Base->call(Array, Array, Array)
+#9 C:\\OSPanel\\domains\\localhost\\fotoarchive\\index.php(113): Base->run()
+#10 {main}'
+
+Error: 42S02 on 2017-12-20 10:55:30
+C:\OSPanel\domains\localhost\fotoarchive\vendor\bcosca\fatfree\lib\db\sql.php:226
+SQLSTATE[42S02]: Base table or view not found: 1146 Table 'fotoarchive.foto1' doesn't exist
+'#0 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql.php(226): PDOStatement->execute()
+#1 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql.php(391): DB\\SQL->exec(Array, Array)
+#2 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql\\mapper.php(660): DB\\SQL->schema(\'foto1\', NULL, 60)
+#3 C:\\OSPanel\\domains\\localhost\\fotoarchive\\functions\\functions.php(100): DB\\SQL\\Mapper->__construct(Object(DB\\SQL), \'foto1\')
+#4 C:\\OSPanel\\domains\\localhost\\fotoarchive\\functions\\functions.php(81): deleteEntity(Object(Base), \'foto1\', \'1665\')
+#5 C:\\OSPanel\\domains\\localhost\\fotoarchive\\page\\ReportFormPage.php(275): deleteFoto(Object(Base), \'1665\')
+#6 C:\\OSPanel\\domains\\localhost\\fotoarchive\\page\\ReportFormPage.php(51): ReportFormPage->deleteFoto(Object(Base), Array)
+#7 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1791): ReportFormPage->post(Object(Base), Array, \'ReportFormPage-...\')
+#8 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1612): Base->call(Array, Array, Array)
+#9 C:\\OSPanel\\domains\\localhost\\fotoarchive\\index.php(113): Base->run()
+#10 {main}'
+
+Error: 23000 on 2017-12-24 11:26:30
+C:\OSPanel\domains\localhost\fotoarchive\vendor\bcosca\fatfree\lib\db\sql.php:226
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '62-' for key 'foto_upload_id'
+'#0 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql.php(226): PDOStatement->execute()
+#1 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql\\mapper.php(426): DB\\SQL->exec(Array, Array)
+#2 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\cursor.php(245): DB\\SQL\\Mapper->insert()
+#3 C:\\OSPanel\\domains\\localhost\\fotoarchive\\functions\\functions.php(464): DB\\Cursor->save()
+#4 C:\\OSPanel\\domains\\localhost\\fotoarchive\\page\\ReportFormPage.php(182): addFoto(Object(Base), 62, \'uploads/directo...\', NULL, 2048, 1536)
+#5 C:\\OSPanel\\domains\\localhost\\fotoarchive\\functions\\cron.php(39): ReportFormPage::uploadFile(Object(Base), Array, 62, \'ftp/temp/151401...\')
+#6 C:\\OSPanel\\domains\\localhost\\fotoarchive\\index.php(105): CreateReportFtp::checkZips(Object(Base))
+#7 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1791): {closure}(Object(Base), Array, Object(Closure))
+#8 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1612): Base->call(Object(Closure), Array, \'beforeroute,aft...\')
+#9 C:\\OSPanel\\domains\\localhost\\fotoarchive\\index.php(109): Base->run()
+#10 {main}'
+
+Error: 23000 on 2017-12-24 11:26:30
+C:\OSPanel\domains\localhost\fotoarchive\vendor\bcosca\fatfree\lib\db\sql.php:226
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '62-' for key 'foto_upload_id'
+'#0 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql.php(226): PDOStatement->execute()
+#1 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql\\mapper.php(426): DB\\SQL->exec(Array, Array)
+#2 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\cursor.php(245): DB\\SQL\\Mapper->insert()
+#3 C:\\OSPanel\\domains\\localhost\\fotoarchive\\functions\\functions.php(464): DB\\Cursor->save()
+#4 C:\\OSPanel\\domains\\localhost\\fotoarchive\\page\\ReportFormPage.php(182): addFoto(Object(Base), 62, \'uploads/directo...\', NULL, 2048, 1536)
+#5 C:\\OSPanel\\domains\\localhost\\fotoarchive\\functions\\cron.php(39): ReportFormPage::uploadFile(Object(Base), Array, 62, \'ftp/temp/151401...\')
+#6 C:\\OSPanel\\domains\\localhost\\fotoarchive\\index.php(105): CreateReportFtp::checkZips(Object(Base))
+#7 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1791): {closure}(Object(Base), Array, Object(Closure))
+#8 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1612): Base->call(Object(Closure), Array, \'beforeroute,aft...\')
+#9 C:\\OSPanel\\domains\\localhost\\fotoarchive\\index.php(109): Base->run()
+#10 {main}'
+
+Error: 23000 on 2017-12-24 11:26:30
+C:\OSPanel\domains\localhost\fotoarchive\vendor\bcosca\fatfree\lib\db\sql.php:226
+SQLSTATE[23000]: Integrity constraint violation: 1062 Duplicate entry '62-' for key 'foto_upload_id'
+'#0 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql.php(226): PDOStatement->execute()
+#1 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql\\mapper.php(426): DB\\SQL->exec(Array, Array)
+#2 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\cursor.php(245): DB\\SQL\\Mapper->insert()
+#3 C:\\OSPanel\\domains\\localhost\\fotoarchive\\functions\\functions.php(464): DB\\Cursor->save()
+#4 C:\\OSPanel\\domains\\localhost\\fotoarchive\\page\\ReportFormPage.php(182): addFoto(Object(Base), 62, \'uploads/directo...\', NULL, 2048, 1536)
+#5 C:\\OSPanel\\domains\\localhost\\fotoarchive\\functions\\cron.php(39): ReportFormPage::uploadFile(Object(Base), Array, 62, \'ftp/temp/151401...\')
+#6 C:\\OSPanel\\domains\\localhost\\fotoarchive\\index.php(105): CreateReportFtp::checkZips(Object(Base))
+#7 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1791): {closure}(Object(Base), Array, Object(Closure))
+#8 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1612): Base->call(Object(Closure), Array, \'beforeroute,aft...\')
+#9 C:\\OSPanel\\domains\\localhost\\fotoarchive\\index.php(109): Base->run()
+#10 {main}'
+
+Error: 0 on 2017-12-29 22:25:27
+C:\OSPanel\domains\localhost\fotoarchive\page\DictionaryPage.php:89
+Данную категорию нельзя менять, на нее ссылаются отчеты
+'#0 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1791): DictionaryPage->post(Object(Base), Array, \'DictionaryPage-...\')
+#1 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1612): Base->call(Array, Array, Array)
+#2 C:\\OSPanel\\domains\\localhost\\fotoarchive\\index.php(108): Base->run()
+#3 {main}'
+
+Error: 42000 on 2017-12-29 22:25:34
+C:\OSPanel\domains\localhost\fotoarchive\vendor\bcosca\fatfree\lib\db\sql.php:226
+SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name ''
+'#0 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql.php(226): PDOStatement->execute()
+#1 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql.php(391): DB\\SQL->exec(Array, Array)
+#2 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql\\mapper.php(660): DB\\SQL->schema(NULL, NULL, 60)
+#3 C:\\OSPanel\\domains\\localhost\\fotoarchive\\page\\DictionaryPage.php(75): DB\\SQL\\Mapper->__construct(Object(DB\\SQL), NULL)
+#4 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1791): DictionaryPage->post(Object(Base), Array, \'DictionaryPage-...\')
+#5 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1612): Base->call(Array, Array, Array)
+#6 C:\\OSPanel\\domains\\localhost\\fotoarchive\\index.php(108): Base->run()
+#7 {main}'
+
+Error: 42000 on 2017-12-29 23:16:47
+C:\OSPanel\domains\localhost\fotoarchive\vendor\bcosca\fatfree\lib\db\sql.php:226
+SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name ''
+'#0 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql.php(226): PDOStatement->execute()
+#1 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql.php(391): DB\\SQL->exec(Array, Array)
+#2 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\db\\sql\\mapper.php(660): DB\\SQL->schema(NULL, NULL, 60)
+#3 C:\\OSPanel\\domains\\localhost\\fotoarchive\\page\\DictionaryPage.php(75): DB\\SQL\\Mapper->__construct(Object(DB\\SQL), NULL)
+#4 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1791): DictionaryPage->post(Object(Base), Array, \'DictionaryPage-...\')
+#5 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1612): Base->call(Array, Array, Array)
+#6 C:\\OSPanel\\domains\\localhost\\fotoarchive\\index.php(108): Base->run()
+#7 {main}'
+
+Error: 0 on 2017-12-29 23:17:06
+C:\OSPanel\domains\localhost\fotoarchive\page\DictionaryPage.php:97
+Данную категорию нельзя менять, на нее ссылаются отчеты
+'#0 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1791): DictionaryPage->post(Object(Base), Array, \'DictionaryPage-...\')
+#1 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1612): Base->call(Array, Array, Array)
+#2 C:\\OSPanel\\domains\\localhost\\fotoarchive\\index.php(108): Base->run()
+#3 {main}'
+
+Error: 0 on 2017-12-29 23:17:11
+C:\OSPanel\domains\localhost\fotoarchive\page\DictionaryPage.php:97
+Данную категорию нельзя менять, на нее ссылаются отчеты
+'#0 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1791): DictionaryPage->post(Object(Base), Array, \'DictionaryPage-...\')
+#1 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1612): Base->call(Array, Array, Array)
+#2 C:\\OSPanel\\domains\\localhost\\fotoarchive\\index.php(108): Base->run()
+#3 {main}'
+
+Error: 0 on 2017-12-29 23:17:18
+C:\OSPanel\domains\localhost\fotoarchive\page\DictionaryPage.php:97
+Данную категорию нельзя менять, на нее ссылаются отчеты
+'#0 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1791): DictionaryPage->post(Object(Base), Array, \'DictionaryPage-...\')
+#1 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1612): Base->call(Array, Array, Array)
+#2 C:\\OSPanel\\domains\\localhost\\fotoarchive\\index.php(108): Base->run()
+#3 {main}'
+
+Error: 0 on 2017-12-29 23:17:27
+C:\OSPanel\domains\localhost\fotoarchive\page\DictionaryPage.php:97
+Данную категорию нельзя менять, на нее ссылаются отчеты
+'#0 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1791): DictionaryPage->post(Object(Base), Array, \'DictionaryPage-...\')
+#1 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1612): Base->call(Array, Array, Array)
+#2 C:\\OSPanel\\domains\\localhost\\fotoarchive\\index.php(108): Base->run()
+#3 {main}'
+
+Error: 0 on 2017-12-29 23:17:33
+C:\OSPanel\domains\localhost\fotoarchive\page\DictionaryPage.php:97
+Данную категорию нельзя менять, на нее ссылаются отчеты
+'#0 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1791): DictionaryPage->post(Object(Base), Array, \'DictionaryPage-...\')
+#1 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1612): Base->call(Array, Array, Array)
+#2 C:\\OSPanel\\domains\\localhost\\fotoarchive\\index.php(108): Base->run()
+#3 {main}'
+
+Error: 0 on 2017-12-30 00:22:39
+C:\OSPanel\domains\localhost\fotoarchive\page\DictionaryPage.php:97
+Данную категорию нельзя менять, на нее ссылаются отчеты
+'#0 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1791): DictionaryPage->post(Object(Base), Array, \'DictionaryPage-...\')
+#1 C:\\OSPanel\\domains\\localhost\\fotoarchive\\vendor\\bcosca\\fatfree\\lib\\base.php(1612): Base->call(Array, Array, Array)
+#2 C:\\OSPanel\\domains\\localhost\\fotoarchive\\index.php(108): Base->run()
+#3 {main}'
+

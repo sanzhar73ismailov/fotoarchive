@@ -1,0 +1,92 @@
+<include href="view/parts/header.htm" />
+
+<div id="menu2" class="tab-pane">
+	<div class="panel-body">
+		<div class="col-md-12">
+
+			<h3>Список загрузок</h3>
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>#</th>
+						<th>Статус</th>
+						<th>Удалить</th>
+						<th>Кол-во фото</th>
+						<th>ФИО сотрудника</th>
+						<th>Дата съемки</th>
+						<th>Район</th>
+						<!-- <th>Пользователь</th> -->
+					</tr>
+				</thead>
+				<tfoot>
+					<tr>
+						<td colspan="6">
+							<ul class="pagination">
+							<set firstActive=''/>
+							<set lastActive=''/>
+							<check if="{{@page==1}}"><set firstActive='active'/></check>
+							<check if="{{@page==@pages}}"><set lastActive='active'/></check>
+								<li class="{{@firstActive}}"><a href="{{@BASE}}/reports/1">Первая</a></li>
+								
+								<check if="{{@pages > 1 and @page > 2}}">
+									<li><a href="{{@BASE}}/reports/{{@page-1}}">{{@page-1}}</a></li>
+								 </check>
+								 
+								 <check if="{{(@pages > 1) and (@page > 1) }}">
+									<li class="active"><a href="{{@BASE}}/reports/{{@page}}">{{@page}}</a></li>
+								 </check>
+								
+								<check if="{{ (@pages > 2 and ((@page+1) < @pages)) or (@pages > 1 and @page == 1) }}">
+									<li><a href="{{@BASE}}/reports/{{@page+1}}">{{@page+1}}</a></li>
+								 </check>
+								 
+								 
+								 <check if="{{@pages > 2 and @page == 1}}">
+									<li><a href="{{@BASE}}/reports/3">3</a></li>
+								 </check>
+								
+								<check if="{{@pages > 2}}">
+									<li class="{{@lastActive}}"><a href="{{@BASE}}/reports/{{@pages}}">Последняя</a></li>
+								</check>
+								
+							</ul>
+						</td>
+					</tr>
+				</tfoot>
+				<tbody>
+
+					<repeat group="{{ @reports }}" value="{{ @report }}">
+
+					<tr>
+						<td>{{ @report['id'] }}</td>
+						<td><check if="@report.status_id==0"> <a class="btn btn-default btn-block" href="{{@BASE}}/report/{{@report.id}}">
+						 <span class="glyphicon glyphicon-pencil" aria-hidden="true">{{@report.status_name}}</span></a>
+
+							</check> <check if="@report.status_id==1"> <a class="btn btn-info btn-block" href="{{@BASE}}/report/{{@report.id}}"> <span class="glyphicon glyphicon-pencil" aria-hidden="true">{{@report.status_name}}</span></a>
+
+							</check> <check if="@report.status_id==2"> <a class="btn btn-primary btn-block" href="{{@BASE}}/report/{{@report.id}}"> <span class="glyphicon glyphicon-pencil" aria-hidden="true">{{@report.status_name}}</span></a>
+
+							</check> <check if="@report.status_id==3"> <a class="btn btn-success btn-block" href="{{@BASE}}/report/{{@report.id}}"> <span class="glyphicon glyphicon-pencil" aria-hidden="true">{{@report.status_name}}</span></a>
+							</check> <check if="@report.status_id==4"> <a class="btn btn-warning btn-block" href="{{@BASE}}/report/{{@report.id}}"> <span class="glyphicon glyphicon-pencil" aria-hidden="true">{{@report.status_name}}</span></a>
+							</check>
+							</td>
+						<td>
+						<check if="@report.status_id<3"> 
+							<true><a class="btn btn-danger deleteReport" href="{{@BASE}}/reportDelete/{{@report.id}}/{{@page}}">Удалить</a></true>
+							<false>&nbsp;</false>
+						</check>
+						</td>
+						<td class="category-name">{{ @report.fotos }} <check if="@report.ftp"><span class='label label-info'>FTP</span></check></td>
+						<td class="category-name">{{ @report.e_last_name }} {{@report.e_first_name }} {{ @report.e_patronymic_name }}</td>
+						<td class="category-name">{{ @report.date }}</td>
+						<td class="category-name">{{ @report.r_name }}</td>
+					</tr>
+					</repeat>
+				</tbody>
+			</table>
+		</div>
+		<div id="final-result" class="col-md-12"></div>
+	</div>
+
+</div>
+<include href="view/parts/footer.htm" />

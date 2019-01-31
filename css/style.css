@@ -1,0 +1,39 @@
+body{
+    padding: 70px 0;
+}
+
+form{
+	margin-top: 10px;
+}
+.form-horizontal .form-inline .form-group, .input-group{
+	margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.alert{
+    margin-top: 10px;
+}
+
+.img-sizing{
+    width: 190px;
+    height: auto;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.img-sizing_report_page{
+    width: 90px;
+    height: 60px;
+    margin: auto;
+}
+.foto_gallery{
+	 width: 190px;
+    height: auto;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+#imgSections{
+    overflow-y: scroll;
+    height: 600px;
+}
+

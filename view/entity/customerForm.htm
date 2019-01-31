@@ -1,0 +1,44 @@
+<div class="form-group">
+				<label class="control-label col-sm-2" for="id">ID:</label>
+				<div class="col-sm-10">
+				<check if="{{@entityObj.id}}">
+					<true><h4><span class="label label-info">{{@entityObj.id}}</span></h4></true>
+					<false><h4><span class="label label-warning">Новый объект</span></h4></false>
+				</check>	
+				</div>
+			</div>
+
+			<div class="form-group">
+				<label class="control-label col-sm-2">Наименование:</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" name="name" value="{{@entityObj.name}}" placeholder="Наименование" required/>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label class="control-label col-sm-2">Наименование официальное:</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" name="name_official" value="{{@entityObj.name_official}}" placeholder="Наименование официальное" required/>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label class="control-label col-sm-2">email:</label>
+				<div class="col-sm-10">
+					<input type="email" class="form-control" name="email" value="{{@entityObj.email}}" placeholder="email" required/>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label class="control-label col-sm-2">Телефон:</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" name="phone_number" value="{{@entityObj.phone_number}}" placeholder="Телефон" required/>
+				</div>
+			</div>
+			
+			<div class="form-group">
+				<label class="control-label col-sm-2">Представитель:</label>
+				<div class="col-sm-10">
+					<input type="text" class="form-control" name="representative" value="{{@entityObj.representative}}" placeholder="Представитель" required/>
+				</div>
+			</div>

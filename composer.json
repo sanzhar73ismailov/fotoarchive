@@ -1,0 +1,16 @@
+{
+	"config" : {
+		"secure-http" : false
+	},
+	"name" : "fotoarchive",
+	"description" : "micro CRM",
+	"type" : "project",
+	"require" : {
+		"bcosca/fatfree" : "^3.6"
+	},
+	"authors" : [{
+			"name" : "Sanzhar Ismailov",
+			"email" : "sanzhar73@gmail.com"
+		}
+	]
+}

@@ -1,0 +1,17 @@
+<thead>
+						<th>#</th>
+						<th>Логин</th>
+					</thead>
+					<tbody>
+						<repeat group="{{ @entityList }}" value="{{ @item }}">
+						<tr class="">
+							<td>{{ @item.id }}</td>
+							
+						<set link_class="btn btn-default btn-block" />
+						<check if="{{ @item.id==@entityObj.id }}"> <set link_class="btn btn-primary btn-block" /></check>
+							<td><a class="{{@link_class}}" href="{{@BASE}}/dictionary/{{@entity}}/{{@item.id}}">
+							<span class="glyphicon glyphicon-pencil">
+							{{ @item.login }}</a></td>
+						</tr>
+						</repeat>
+					</tbody>

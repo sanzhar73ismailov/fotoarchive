@@ -1,0 +1,138 @@
+<include href="view/parts/header.htm" />
+<include href="view/parts/report_menu.htm" />
+<div id="home" class="tab-pane">
+	<div class="container">
+		<h3>Стоимость фототчета</h3>
+		<div class="panel-group">
+			<div class="panel panel-default">
+				<div class="panel-heading">Рассчеты фототчета № {{@report.id}}
+					Сотрудник {{ @report.e_last_name }} {{ @report.e_first_name }} {{
+					@report.e_patronymic_name }}, район {{@report.r_name }}, дата
+					отчета {{ @report.date }}</div>
+				<div class="panel-body">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>№</th>
+								<th>Категория</th>
+								<th>Цена листовки</th>
+								<th>Количество</th>
+								<th>Сумма</th>
+							</tr>
+						</thead>
+						<tbody>
+							<repeat group="{{ @categories }}" value="{{ @category }}"
+								counter="{{ @ctr }}">
+							<tr>
+								<td>{{ @ctr }}</td>
+								<td>{{ @category.category_name }}</td>
+								<td>{{ @category.price }}</td>
+								<td>{{ @category.foto_number }}</td>
+								<td>{{ @category.category_sum }}</td>
+							</tr>
+
+							</repeat>
+							<tr>
+							<td>Общая сумма</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>{{@totalRow}}</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="panel-footer">
+					<h4 class="text-danger">НЕ ЗАБУДЬТЕ ВНЕСТИ СУММУ ФОТООТЧЕТА В
+						ЗАРПЛАТЫ!</h4>
+				</div>
+			</div>
+			<div class="panel panel-default">
+				<div class="panel-heading">Отправить по заказчикам</div>
+				<div class="panel-body">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>№</th>
+								<th>Итого, расчет</th>
+								<th>Имя отчета</th>
+								<th>Заказчик</th>
+								<th>Последняя отправка почты</th>
+								<th>Карта</th>
+								<th>Скачать</th>
+							</tr>
+						</thead>
+						<tbody>
+							<repeat group="{{ @categories }}" value="{{ @category }} "
+								counter="{{ @ctr }}"> <check if="{{ @category.id }}">
+							<tr class='tr_category' id='categoryid_{{@category.id}}'>
+								<td>{{@ctr}}</td>
+								<td>{{@category.category_name}},
+									{{@category.foto_number}} шт. + адреса</td>
+								<td>{{@category.file_zip}}</td>
+								<td>{{@category.customer_name}}<br/>({{@category.email}})</td>
+								<td>
+								<set label_class="label label-default" />
+								<set show_check_emailsend_display_style="none" />
+								<check if="{{@category.email_send}}">
+									<true>
+										<check if="{{@category.email_result}}">
+											<true><set label_class="label label-success" /></true>
+											<false>
+											     <set label_class="label label-danger" />
+											     <set show_check_emailsend_display_style="" />
+											</false>
+										</check>
+									</true>
+									<false><set label_class="label label-warning" />
+										   <set show_check_emailsend_display_style="" />
+									</false>
+								</check>
+								<h4>
+								
+								<span id='result_email_{{@category.id}}' class="{{@label_class}}">
+								<check if="{{@category.email_send}}">
+									<true>
+										<check if="{{@category.email_result}}">
+											<true>OK ({{@category.email_date}})
+											<check if="{{@category.email_send_manual}}"> (вручную)</check>
+											</true>
+											<false>Ошибка: {{@category.email_error}} ({{@category.email_date}})
+											</false>
+										</check>
+									</true>
+									<false>Не отправлялось</false>
+								</check>
+								</span>
+								</h4>
+								<button style="display: {{@show_check_emailsend_display_style}}" id='check_emailsend_{{@category.id}}' type="button" class="btn mark_as_send">Отметить как отправленный</button>
+								</td>
+								<td></td>
+								<td><a
+									href="{{@BASE}}/{{@category.file_path}}/{{@category.file_zip}}"
+									download><button type="button" class="btn btn-info">Скачать</button></a></td>
+							</tr>
+							</check> </repeat>
+						</tbody>
+					</table>
+					<div style='display: none' id="progress_active_div"
+						class="progress">
+						<div id="progress_active_id"
+							class="progress-bar progress-bar-info" role="progressbar"
+							aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"
+							style="width: 0%"></div>
+					</div>
+					<div class="alert alert-danger" id='email_error_div' style="display:none"></div>
+					
+					<button id="send_mail_button" type="submit" class="btn btn-primary"
+						name="send_email">ОТПРАВИТЬ ЗАКАЗЧИКАМ СЕЙЧАС</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+</div>
+<include href="view/parts/footer.htm" />
